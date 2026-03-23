@@ -3,7 +3,7 @@ const s = new mongoose.Schema({
   title:{type:String,required:true}, slug:{type:String,required:true,unique:true},
   shortDescription:String, fullDescription:String, posterImage:String, bannerImage:String, trailerLink:String,
   category:{type:mongoose.Schema.Types.ObjectId,ref:'Category'},
-  type:{type:String,enum:['movie','anime','series','show'],default:'movie'},
+  type:{type:String,enum:['movie','anime','series','show','cartoon'],default:'movie'},
   genres:[String], language:String, subtitles:[String], year:String,
   rating:{type:Number,default:0}, imdbRating:{type:Number,default:0}, duration:String,
   ageRating:{type:String,default:'U'}, cast:[String], director:String, studio:String, country:String,
